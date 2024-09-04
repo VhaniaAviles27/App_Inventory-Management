@@ -10,6 +10,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import firebase from '../../../../Firebase';
 
 // Poner como default el Usuario = "User"
+// Comentario 2
 
 const Register = ({navigation}) => {
 
