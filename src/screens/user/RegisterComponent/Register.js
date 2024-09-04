@@ -9,6 +9,8 @@ import { auth } from "../../../../Firebase";
 import { FontAwesome } from '@expo/vector-icons';
 import firebase from '../../../../Firebase';
 
+// Poner como default el Usuario = "User"
+
 const Register = ({navigation}) => {
 
   const [name, setName] = useState("");
