@@ -62,6 +62,7 @@ _Navegación de Administrador_
 
 ## Video 🎥
 
+Adjunto link de la explicación del aplicativo: https://drive.google.com/file/d/1xoTQBfzWdn_VmIpifYwSdIxWj_k4jIuy/view?usp=sharing
 
 ## Autor ✒️
 
