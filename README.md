@@ -26,9 +26,6 @@ Estas son las dependencias requeridas para el proyecto
 
 ```
 
-## Flujo de trabajo ⌛
-
-
 ## Vistas 👀
 
 _Inicio de Sesión - Registro_
@@ -62,6 +59,9 @@ _Navegación de Administrador_
   <img src="https://github.com/user-attachments/assets/5621f9b5-53a4-4557-9381-9323bd21d74d" alt="Screen_Admin_Returned">
   <img src="https://github.com/user-attachments/assets/077fad1d-e980-4bbb-9b5b-8b3ba2616dbf" alt="Screen_Admin_Profile">
 </p>
+
+## Video 🎥
+
 
 ## Autor ✒️
 
