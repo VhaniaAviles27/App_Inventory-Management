@@ -1,5 +1,6 @@
-import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, ImageBackground, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
+import { rolStyle } from '../../../styles/userStyles/RolViewStyle.js';
 import { useNavigation } from '@react-navigation/native';
 
 const Rol = () => {
@@ -13,27 +14,27 @@ const Rol = () => {
     <ImageBackground
       source={require("../../../../assets/fondo.jpg")}
       imageStyle={{ opacity: 0.25 }}
-      style={styles.backgroundContainer}
+      style={rolStyle.backgroundContainer}
       resizeMode="cover"
     >
-      <View style={styles.containerPrincipal}>
-        <Text style={styles.textSelectRol}>Escoja su Rol</Text>
+      <View style={rolStyle.containerPrincipal}>
+        <Text style={rolStyle.textSelectRol}>Escoja su Rol</Text>
         <TouchableOpacity onPress={() => navigateScreen("Admin")}>
-          <View style={styles.containerIcons}>
+          <View style={rolStyle.containerIcons}>
             <Image
-              style={styles.iconRolAdmin}
+              style={rolStyle.iconRolAdmin}
               source={require("../../../../assets/iconAdmin.png")}
             />
-            <Text style={styles.textRol}>Administrador</Text>
+            <Text style={rolStyle.textRol}>Administrador</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigateScreen("User")}>
-          <View style={styles.containerIcons}>
+          <View style={rolStyle.containerIcons}>
             <Image
-              style={styles.iconRolUser}
+              style={rolStyle.iconRolUser}
               source={require("../../../../assets/iconUser.png")}
             />
-            <Text style={styles.textRol}>Usuario</Text>
+            <Text style={rolStyle.textRol}>Usuario</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -43,39 +44,3 @@ const Rol = () => {
 
 
 export default Rol
-
-const styles = StyleSheet.create({
-  backgroundContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    height: "100%",
-  },
-  containerPrincipal: {
-    backgroundColor: "white",
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 40,
-    width: "60%",
-    height: "60%",  
-
-  },
-  containerIcons: {
-    padding: 10,
-  },
-  iconRolAdmin: {
-    width: 150,
-    height: 150,
-  },
-  iconRolUser: {
-    width: 145,
-    height: 100,
-  },
-  textRol: {
-    textAlign: "center",
-    padding: 10,
-  },
-  textSelectRol:{
-    opacity: 0.5,
-  }
-});

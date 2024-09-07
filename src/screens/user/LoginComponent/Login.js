@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, Image, TextInput, TouchableOpacity, ImageBackground, ScrollView, Alert } from 'react-native'
-import { loginStyle } from '../../../styles/loginComponent/LoginViewStyle'
+import { loginStyle } from '../../../styles/userStyles/LoginViewStyle.js'
 import { Entypo } from '@expo/vector-icons';
 import Spinner from "react-native-loading-spinner-overlay";
 import { useNavigation } from "@react-navigation/native";

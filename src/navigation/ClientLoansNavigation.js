@@ -5,7 +5,7 @@ import Home from "../screens/client/clientLoans/Home";
 import LoansRegistration from "../screens/client/clientLoans/LoansRegistration";
 import ReturnRegistration from "../screens/client/clientLoans/ReturnRegistration";
 import ProductDetail from "../screens/product/ProductDetail";
-import ClientPerfil from "../screens/client/clientLoans/ClientPerfil";
+import ClientProfile from "../screens/client/clientLoans/ClientProfile";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -51,8 +51,8 @@ const ClientLoansNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="ClientPerfil"
-        component={ClientPerfil}
+        name="ClientProfile"
+        component={ClientProfile}
         options={{
           tabBarIcon: PersonIcon,
         }}

@@ -1,10 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome5, Ionicons } from '@expo/vector-icons';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import AdminPerfil from "../screens/admin/adminLoans/AdminPerfil";
 import Requested from "../screens/admin/adminLoans/Requested";
 import ReturnList from "../screens/admin/adminLoans/ReturnList";
 import React from 'react'
+import AdminProfile from '../screens/admin/adminLoans/AdminProfile';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -40,7 +40,7 @@ const AdminLoansNavigator = () => {
       />
       <Tab.Screen
         name="Perfil"
-        component={AdminPerfil}
+        component={AdminProfile}
         options={{
           tabBarIcon: AdminIcon,
         }}
