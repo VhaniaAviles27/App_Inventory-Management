@@ -64,6 +64,11 @@ _Navegación de Administrador_
 
 Adjunto link de la explicación del aplicativo: https://drive.google.com/file/d/1xoTQBfzWdn_VmIpifYwSdIxWj_k4jIuy/view?usp=sharing
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/49f0c469-8efb-4898-86b8-06754c78484a" alt="Screen_Video">
+</p>
+
+
 ## Autor ✒️
 
 _**Vhania Avilés Bonilla** - *Mi Repositorio* -[Vhania Avilés](https://github.com/PaulGuillen?tab=repositories)_
