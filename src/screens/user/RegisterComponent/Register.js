@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, Image, TextInput, TouchableOpacity, ImageBackground, ScrollView, Alert } from 'react-native'
-import { registerStyle } from '../../../styles/registerComponent/RegisterViewStyle';
+import { registerStyle } from '../../../styles/userStyles/RegisterViewStyle.js';
 import { Entypo } from '@expo/vector-icons';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Spinner from "react-native-loading-spinner-overlay";

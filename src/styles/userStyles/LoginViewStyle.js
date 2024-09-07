@@ -22,7 +22,7 @@ export const loginStyle = StyleSheet.create({
   backgroundImage: {
     flex: 1,
     resizeMode: "cover",
-    opacity: 0.85
+    opacity: 0.85,
   },
 
   input: {

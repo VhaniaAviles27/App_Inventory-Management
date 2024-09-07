@@ -1,5 +1,6 @@
 import { Alert, StyleSheet, Text, View, FlatList, Image, Pressable } from 'react-native'
 import React, { useCallback, useState } from 'react'
+import { productCardStyle } from '../styles/productStyles/ProductCardViewStyle.js';
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import firebase from '../../Firebase';
 import 'firebase/database';
@@ -36,13 +37,13 @@ const ProductCard = ({ filterText }) => {
   const renderItem = ({ item }) => (
     <Pressable
       onPress={() => navigation.navigate("ProductDetail", { productDetail: item })}
-      style={styles.itemContainer}
+      style={productCardStyle.itemContainer}
     >
       <View>
-        <View style={styles.card}>
-          <Image source={{ uri: item.foto }} style={styles.image} />
-          <Text style={styles.priceText}>{item.nombre}</Text>
-          <Text style={styles.titleText}>Stock: {item.stock}</Text>
+        <View style={productCardStyle.card}>
+          <Image source={{ uri: item.foto }} style={productCardStyle.image} />
+          <Text style={productCardStyle.priceText}>{item.nombre}</Text>
+          <Text style={productCardStyle.titleText}>Stock: {item.stock}</Text>
         </View>
       </View>
     </Pressable>
@@ -59,38 +60,3 @@ const ProductCard = ({ filterText }) => {
 }
 
 export default ProductCard
-
-const styles = StyleSheet.create({
-
-  card: {
-    alignContent: "center",
-    borderRadius: 5,
-    paddingTop: 5,
-    paddingHorizontal: 5,
-    paddingBottom: 10,
-    alignItems: "center",
-    backgroundColor: "#071356",
-  },
-  itemContainer: {
-    width: "50%",
-    padding: 1,
-  },
-  image: {
-    width: "100%",
-    borderRadius: 5,
-    aspectRatio: 1,
-    marginBottom: 5,
-  },
-  priceText: {
-    flex: 1,
-    paddingVertical: 0,
-    color: "white",
-    textAlign: 'center',
-  },
-  titleText: {
-    flex: 1,
-    paddingVertical: 0,
-    color: "white",
-    fontWeight: '900',
-  },
-})

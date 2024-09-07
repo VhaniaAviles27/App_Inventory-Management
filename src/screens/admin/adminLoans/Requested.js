@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import { useFocusEffect } from "@react-navigation/native";
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Alert } from "react-native";
+import { adminRequestedStyle } from "../../../styles/adminStyles/AdminRequestedStyle.js";
+import { Text, View, TouchableOpacity, ScrollView, Alert } from "react-native";
 import { addToCartHistoryPerUser, denyLoan, fetchLoansByStatus } from "../extents/ExtentRequested";
 import Spinner from "react-native-loading-spinner-overlay";
 
@@ -61,33 +62,33 @@ const Requested = () => {
   };
 
   return (
-    <ScrollView style={styles.container}>
-      <Text style={styles.header}>Listado de solicitudes</Text>
+    <ScrollView style={adminRequestedStyle.container}>
+      <Text style={adminRequestedStyle.header}>Listado de solicitudes</Text>
       {loans.map((loan, index) => (
-        <View key={index} style={styles.registerContainer}>
-          <View style={styles.registroPrestamo}>
-            <View style={styles.infoContainer}>
-              <Text style={styles.infoText}>Fecha: {loan.fechaPrestamo}</Text>
-              <Text style={styles.infoText}>Artículo: {loan.nombre}</Text>
-              <Text style={styles.infoText}>Cantidad: {loan.cantidadSolicitada}</Text>
-              <Text style={styles.infoText}>Solicitado por: {loan.nombreSolicitante} {loan.apellidoSolicitante}</Text>
+        <View key={index} style={adminRequestedStyle.registerContainer}>
+          <View style={adminRequestedStyle.registroPrestamo}>
+            <View style={adminRequestedStyle.infoContainer}>
+              <Text style={adminRequestedStyle.infoText}>Fecha: {loan.fechaPrestamo}</Text>
+              <Text style={adminRequestedStyle.infoText}>Artículo: {loan.nombre}</Text>
+              <Text style={adminRequestedStyle.infoText}>Cantidad: {loan.cantidadSolicitada}</Text>
+              <Text style={adminRequestedStyle.infoText}>Solicitado por: {loan.nombreSolicitante} {loan.apellidoSolicitante}</Text>
             </View>
           </View>
-          <View style={styles.buttonContent}>
+          <View style={adminRequestedStyle.buttonContent}>
             <TouchableOpacity
-              style={styles.returnButtonAllow}
+              style={adminRequestedStyle.returnButtonAllow}
               onPress={() => handleAllow(loan)}>
-              <Text style={styles.returnButtonText}>Permitir</Text>
+              <Text style={adminRequestedStyle.returnButtonText}>Permitir</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              style={styles.returnButtonDeny}
+              style={adminRequestedStyle.returnButtonDeny}
               onPress={() => handleDeny(loan.id)}>
-              <Text style={styles.returnButtonText}>Denegar</Text>
+              <Text style={adminRequestedStyle.returnButtonText}>Denegar</Text>
             </TouchableOpacity>
           </View>
         </View>
       ))}
-      {loans.length === 0 && <Text style={styles.noLoansText}>No hay solicitudes pendientes.</Text>}
+      {loans.length === 0 && <Text style={adminRequestedStyle.noLoansText}>No hay solicitudes pendientes.</Text>}
 
       <Spinner
         visible={loading}
@@ -97,77 +98,5 @@ const Requested = () => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  returnButtonAllow: {
-    width: 150,
-    backgroundColor: "#4CCD23",
-    marginTop: 15,
-    marginHorizontal: 10,
-    padding: 10,
-    borderRadius: 5,
-    alignItems: "center",
-  },
-  returnButtonDeny: {
-    width: 150,
-    backgroundColor: "#DC1111",
-    marginTop: 15,
-    marginHorizontal: 10,
-    padding: 10,
-    borderRadius: 5,
-    alignItems: "center",
-  },
-  returnButtonText: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
-  registerContainer: {
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 16,
-    padding: 16,
-    backgroundColor: "#fff",
-    borderRadius: 8,
-    elevation: 3,
-    shadowColor: "#333",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-  },
-  buttonContent: {
-    flexDirection: "row",
-  },
-
-  container: {
-    flex: 1,
-    padding: 35,
-    backgroundColor: "#f5f5f5",
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 16,
-    color: "#333",
-  },
-  registroPrestamo: {
-    flexDirection: "row",
-  },
-  infoContainer: {
-    flex: 1,
-  },
-  infoText: {
-    fontWeight: "bold",
-    fontSize: 15,
-    color: "#333",
-  },
-  noLoansText: {
-    fontSize: 18,
-    color: "#555",
-    textAlign: "center",
-  },
-});
 
 export default Requested;

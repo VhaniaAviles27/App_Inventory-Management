@@ -1,6 +1,7 @@
-import { Alert, FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native'
+import { Alert, FlatList, Image, ScrollView, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native'
 import React, { useState } from 'react'
 import { addToCartFirebaseInProgress } from '../../components/CartLoans';
+import { productStyle } from '../../styles/productStyles/ProductViewStyle.js';
 import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from '@expo/vector-icons';
 import 'firebase/database';
@@ -113,7 +114,7 @@ const ProductDetail = ({ route }) => {
           showsHorizontalScrollIndicator={false}
           pagingEnabled
         />
-        <View style={styles.imageContainer}>
+        <View style={productStyle.imageContainer}>
           <Image
             source={{ uri: productDetail.foto }}
             style={{ width, aspectRatio: 1 }}
@@ -122,13 +123,13 @@ const ProductDetail = ({ route }) => {
 
         <View style={{ padding: 20 }}>
           {/* Title */}
-          <Text style={styles.name}>{productDetail.nombre}</Text>
+          <Text style={productStyle.name}>{productDetail.nombre}</Text>
 
           {/* Stock */}
-          <Text style={styles.name}>Stock: {productDetail.stock}</Text>
+          <Text style={productStyle.name}>Stock: {productDetail.stock}</Text>
 
           {/* ChangeStock */}
-          <View style={styles.stock}>
+          <View style={productStyle.stock}>
 
             <TouchableOpacity onPress={handleDecreaseQuantity}>
               <AntDesign name="minuscircleo" size={20} />
@@ -142,11 +143,11 @@ const ProductDetail = ({ route }) => {
           </View>
 
           {/* Marca */}
-          <Text style={styles.description}>{productDetail.marca}</Text>
+          <Text style={productStyle.description}>{productDetail.marca}</Text>
 
           {/* Add Cart Button */}
-          <TouchableOpacity onPress={handleAddToCart} style={styles.button}>
-            <Text style={styles.buttonText}>SOLICITAR PRÉSTAMO</Text>
+          <TouchableOpacity onPress={handleAddToCart} style={productStyle.button}>
+            <Text style={productStyle.buttonText}>SOLICITAR PRÉSTAMO</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
@@ -156,35 +157,3 @@ const ProductDetail = ({ route }) => {
 
 export default ProductDetail;
 
-const styles = StyleSheet.create({
-  name: {
-    fontSize: 30,
-    fontWeight: "600",
-    marginVertical: 10,
-  },
-
-  stock: {
-    flexDirection: "row",
-
-  },
-
-  description: {
-    marginVertical: 10,
-    fontSize: 15,
-    fontWeight: "300",
-    lineHeight: 30,
-  },
-  button: {
-    backgroundColor: "#071356",
-    width: "80%",
-    alignSelf: "center",
-    padding: 20,
-    borderRadius: 100,
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "white",
-    fontWeight: "600",
-    fontSize: 20,
-  },
-});

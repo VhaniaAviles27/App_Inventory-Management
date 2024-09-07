@@ -1,5 +1,6 @@
-import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, ImageBackground, Text, TouchableOpacity, View } from 'react-native'
 import React, { useCallback, useState } from 'react'
+import { menuStyle } from '../../../styles/userStyles/MenuViewStyle.js';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
 const Menu = ({route}) => {
@@ -39,37 +40,37 @@ const Menu = ({route}) => {
     <ImageBackground
       source={require("../../../../assets/fondo.jpg")}
       imageStyle={{ opacity: 0.25 }}
-      style={styles.backgroundContainer}
+      style={menuStyle.backgroundContainer}
       resizeMode="cover"
     >
-      <View style={styles.columnContainer}>
-        <View style={styles.column}>
+      <View style={menuStyle.columnContainer}>
+        <View style={menuStyle.column}>
           <TouchableOpacity onPress={navigateLoansHome}>
-            <View style={styles.containerOption}>
+            <View style={menuStyle.containerOption}>
               <Image
-                style={styles.iconOptionMenu}
+                style={menuStyle.iconOptionMenu}
                 source={require("../../../../assets/iconLoans.png")}
               />
-              <Text style={styles.textRol}>Prestamos</Text>
+              <Text style={menuStyle.textRol}>Prestamos</Text>
             </View>
           </TouchableOpacity>
 
-          <View style={styles.containerOption}>
+          <View style={menuStyle.containerOption}>
             <Image
-              style={styles.iconOptionMenu}
+              style={menuStyle.iconOptionMenu}
               source={require("../../../../assets/iconManuals.png")}
             />
-            <Text style={styles.textRol}>Guias de Usuario</Text>
+            <Text style={menuStyle.textRol}>Guias de Usuario</Text>
           </View>
         </View>
 
-        <View style={styles.column}>
-          <View style={styles.containerOption}>
+        <View style={menuStyle.column}>
+          <View style={menuStyle.containerOption}>
             <Image
-              style={styles.iconOptionMenu}
+              style={menuStyle.iconOptionMenu}
               source={require("../../../../assets/iconDatasheets.png")}
             />
-            <Text style={styles.textRol}>Datasheet</Text>
+            <Text style={menuStyle.textRol}>Datasheet</Text>
           </View>
         </View>
       </View>
@@ -78,43 +79,3 @@ const Menu = ({route}) => {
 }
 
 export default Menu;
-
-const styles = StyleSheet.create({
-  backgroundContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    height: "100%",
-  },
-  
-  columnContainer: {
-    flexDirection: "row", 
-    justifyContent: "space-between", 
-    width: "80%",
-  },
-
-  column: {
-    flex: 1, 
-  },
-
-  containerOption: {
-    padding: 20,
-    margin: 10,
-    borderRadius: 20,
-    backgroundColor: "white",
-    alignItems: "center",
-  },
-
-  iconOptionMenu:{
-    width: 120,
-    height: 120,
-  },
-
-  textRol: {
-    textAlign: "center",
-  },
-
-  textSelectRol:{
-    opacity: 0.5,
-  }
-});
