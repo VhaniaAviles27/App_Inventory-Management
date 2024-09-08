@@ -59,7 +59,6 @@ const ClientProfile = () => {
             <Text style={clientProfileStyle.userLastName}> {usuarioActual.apellido}</Text>
           </View>
 
-          <Text style={clientProfileStyle.userEmail}>{usuarioActual.correo}</Text>
           <Text style={clientProfileStyle.userDetail}>
             Celular: +51 {usuarioActual.telefono}
           </Text>
@@ -70,6 +69,7 @@ const ClientProfile = () => {
         {/* <TouchableOpacity style={clientProfileStyle.editButton}>
           <Text style={clientProfileStyle.editButtonText}>Editar Perfil</Text>
         </TouchableOpacity> */}
+        
       </View>
     </View>
   );

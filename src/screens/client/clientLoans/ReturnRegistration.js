@@ -47,7 +47,7 @@ const ReturnRegistration = () => {
                 <View style={clientReturnedStyle.registerContainer}>
                   <View style={clientReturnedStyle.registroPrestamo}>
                     <View style={clientReturnedStyle.infoContainer}>
-                      <Text style={clientReturnedStyle.infoText}>Fecha: {item.fechaPrestamo}</Text>
+                      <Text style={clientReturnedStyle.infoText}>Fecha de devolución: {item.fechaPrestamo}</Text>
                       <Text style={clientReturnedStyle.infoText}>Artículo: {item.nombre}</Text>
                       <Text style={clientReturnedStyle.infoText}>
                         Cantidad: {item.cantidadSolicitada}

@@ -18,7 +18,7 @@ const Requested = () => {
   );
   const handleAllow = (loan) => {
     setLoading(true);
-    addToCartHistoryPerUser(loan, loan.cantidadSolicitada, loan.userUID)
+    addToCartHistoryPerUser(loan, loan.cantidadSolicitada, loan.userUID, loan.fechaDevolucion)
       .then((result) => {
         if (result) {
           removeLoanFromUI(loan.id)
@@ -71,7 +71,8 @@ const Requested = () => {
               <Text style={adminRequestedStyle.infoText}>Fecha: {loan.fechaPrestamo}</Text>
               <Text style={adminRequestedStyle.infoText}>Artículo: {loan.nombre}</Text>
               <Text style={adminRequestedStyle.infoText}>Cantidad: {loan.cantidadSolicitada}</Text>
-              <Text style={adminRequestedStyle.infoText}>Solicitado por: {loan.nombreSolicitante} {loan.apellidoSolicitante}</Text>
+              <Text style={adminRequestedStyle.infoText}>Solicitado por: {loan.nombreSolicitante}</Text>
+              <Text style={adminRequestedStyle.infoText}>Fecha de devolución: {loan.fechaDevolucion}</Text>
             </View>
           </View>
           <View style={adminRequestedStyle.buttonContent}>

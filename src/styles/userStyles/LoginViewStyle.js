@@ -38,7 +38,6 @@ export const loginStyle = StyleSheet.create({
     width: "100%",
     marginTop: 23,
   },
-
   buttonLogin: {
     backgroundColor: "#071356",
     padding: 10,

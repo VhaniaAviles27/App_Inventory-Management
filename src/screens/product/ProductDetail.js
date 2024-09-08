@@ -1,12 +1,13 @@
-import { Alert, FlatList, Image, ScrollView, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native'
+import { Alert, FlatList, Image, ScrollView, Text, TextInput, TouchableOpacity, View, useWindowDimensions } from 'react-native'
 import React, { useState } from 'react'
 import { addToCartFirebaseInProgress } from '../../components/CartLoans';
 import { productStyle } from '../../styles/productStyles/ProductViewStyle.js';
 import { useNavigation } from "@react-navigation/native";
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign, Entypo } from '@expo/vector-icons';
 import 'firebase/database';
 import * as SecureStore from "expo-secure-store";
 import firebase from '../../../Firebase.js';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 const ProductDetail = ({ route }) => {
   const { productDetail } = route.params;
@@ -25,6 +26,25 @@ const ProductDetail = ({ route }) => {
       setQuantity(quantityRequested + 1);
     }
   }
+
+  // Función Calendario
+
+  const [date, setDate] = useState(new Date());
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [formattedDateDevolution, setFormattedDateDevolution] = useState('');
+
+  const handleDateChange = (event, selectedDate) => {
+    setShowCalendar(false); 
+    if (selectedDate) {
+      setDate(selectedDate);
+      const formatted = selectedDate.toLocaleDateString(); 
+      setFormattedDateDevolution(formatted);
+    }
+  };
+
+  const showDatePicker = () => {
+    setShowCalendar(true); 
+  };
 
   const fetchUserMainData = async () => {
     try {
@@ -59,9 +79,9 @@ const ProductDetail = ({ route }) => {
     fetchUserMainData();
   };
 
-  const validateStockAndService = async (userUID, name, lastname) => {
+  const validateStockAndService = async (userUID, name) => {
     if (quantityRequested > 0 && productDetail.stock > 0) {
-      addToCartFirebaseInProgress(productDetail, quantityRequested, userUID, name, lastname)
+      addToCartFirebaseInProgress(productDetail, quantityRequested, userUID, name, formattedDateDevolution)
         .then((success) => {
           if (success) {
             Alert.alert("Éxito", "Producto agregado al carrito.", [
@@ -107,7 +127,6 @@ const ProductDetail = ({ route }) => {
   return (
     <View>
       <ScrollView>
-        {/* Image carousel */}
         <FlatList
           data={productDetail.productID}
           horizontal
@@ -122,30 +141,48 @@ const ProductDetail = ({ route }) => {
         </View>
 
         <View style={{ padding: 20 }}>
-          {/* Title */}
           <Text style={productStyle.name}>{productDetail.nombre}</Text>
-
-          {/* Stock */}
-          <Text style={productStyle.name}>Stock: {productDetail.stock}</Text>
+          <Text style={productStyle.modelo}>{productDetail.modelo}</Text>
+          <Text style={productStyle.categoria}>Categoría: {productDetail.categoria}</Text>
+          <Text style={productStyle.ubicación}>Ubicación: {productDetail.ubicación}</Text>
+          <Text style={productStyle.marca}>Marca: {productDetail.marca}</Text>
+          <Text style={productStyle.stock}>Stock: {productDetail.stock}</Text>
 
           {/* ChangeStock */}
-          <View style={productStyle.stock}>
-
-            <TouchableOpacity onPress={handleDecreaseQuantity}>
+          <View style={productStyle.cantidad}>
+            <Text style = {productStyle.textoCantidad}>Cantidad Solicitada:   </Text>
+            <TouchableOpacity onPress={handleDecreaseQuantity} >
               <AntDesign name="minuscircleo" size={20} />
             </TouchableOpacity>
 
-            <Text> {quantityRequested} </Text>
+            <Text>   {quantityRequested}   </Text>
 
             <TouchableOpacity onPress={handleIncreaseQuantity}>
               <AntDesign name="pluscircleo" size={20} />
             </TouchableOpacity>
           </View>
+          
+          <Text style={productStyle.fecha}>Fecha de devolución: </Text>
+          <View style={productStyle.inputFecha}>
+            <TextInput 
+            placeholder='Ingrese una fecha de devolución'
+            value={formattedDateDevolution} 
+            editable={false}
+            />
+            <TouchableOpacity onPress={showDatePicker}>
+              <Entypo style={productStyle.simbolo} name = "calendar"/>
+            </TouchableOpacity>    
+          </View>
 
-          {/* Marca */}
-          <Text style={productStyle.description}>{productDetail.marca}</Text>
-
-          {/* Add Cart Button */}
+          {showCalendar && (
+          <DateTimePicker
+            value={date}
+            mode="date"
+            display= "default"
+            onChange={handleDateChange}
+          />
+          )}
+          
           <TouchableOpacity onPress={handleAddToCart} style={productStyle.button}>
             <Text style={productStyle.buttonText}>SOLICITAR PRÉSTAMO</Text>
           </TouchableOpacity>

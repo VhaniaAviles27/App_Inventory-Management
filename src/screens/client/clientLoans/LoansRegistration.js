@@ -55,20 +55,15 @@ const LoansRegistration = () => {
 
   const handleReturnAction = async (itemId) => {
     try {
-      // 1. Obtener la información del préstamo basado en loansHistoryID
       const loanToReturn = loans.find((loan) => loan.loansHistoryID === itemId);
 
-      // 2. Crear una nueva entrada en LoansReturns
       const returnsRef = firebase.database().ref("LoansReturns");
 
       const currentDate = new Date();
       const formattedDate = `${currentDate.toISOString().slice(0, 10)} ${currentDate.getHours()}:${currentDate.getMinutes()}`;
 
       const newReturn = await returnsRef.push({
-        categoria: loanToReturn.categoria,
-        foto: loanToReturn.foto,
         estado: "DEVUELTO",
-        marca: loanToReturn.marca,
         modelo: loanToReturn.modelo,
         nombre: loanToReturn.nombre,
         productID: loanToReturn.productID,
@@ -125,10 +120,7 @@ const LoansRegistration = () => {
                       <Text style={clientLoanStyle.infoText}>
                         Cantidad: {item.cantidadSolicitada}
                       </Text>
-                      {/* Agregar la fecha hasta la que pidió el préstamo */}
-                      {/* <Text style={clientLoanStyle.infoText}>
-                        Fecha de devolución: {item.cantidadSolicitada}
-                      </Text> */}
+                      <Text style={clientLoanStyle.infoText}>Fecha de devolución: {item.fechaDevolucion}</Text>
                     </View>
                   </View>
                   <View>
@@ -137,7 +129,7 @@ const LoansRegistration = () => {
                       onPress={() => showReturnAlert(item.loansHistoryID)}
                     >
                       <Text style={clientLoanStyle.returnButtonText}>
-                        Devolucion?
+                        DEVOLUCIÓN
                       </Text>
                     </TouchableOpacity>
                   </View>

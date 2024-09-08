@@ -17,7 +17,7 @@ export const fetchLoansByStatus = (status) => {
     });
 };
 
-export const addToCartHistoryPerUser = (productDetail, quantityRequested, userUID) => {
+export const addToCartHistoryPerUser = (productDetail, quantityRequested, userUID, formattedDateDevolution) => {
     return new Promise((resolve, reject) => {
         const loansHistoryRef = firebase.database().ref("LoansHistory");
 
@@ -27,9 +27,7 @@ export const addToCartHistoryPerUser = (productDetail, quantityRequested, userUI
             .slice(0, 10)} ${currentDate.getHours()}:${currentDate.getMinutes()}`;
 
         const newLoanRef = loansHistoryRef.push({
-            categoria: productDetail.categoria,
-            foto: productDetail.foto,
-            marca: productDetail.marca,
+            fechaDevolucion: formattedDateDevolution,
             modelo: productDetail.modelo,
             nombre: productDetail.nombre,
             productID: productDetail.productID,

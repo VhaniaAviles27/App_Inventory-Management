@@ -4,7 +4,7 @@ export const adminRequestedStyle = StyleSheet.create({
   returnButtonAllow: {
     width: 150,
     backgroundColor: "#4CCD23",
-    marginTop: 15,
+    marginTop: 6,
     marginHorizontal: 10,
     padding: 10,
     borderRadius: 5,
@@ -13,7 +13,7 @@ export const adminRequestedStyle = StyleSheet.create({
   returnButtonDeny: {
     width: 150,
     backgroundColor: "#DC1111",
-    marginTop: 15,
+    marginTop: 6,
     marginHorizontal: 10,
     padding: 10,
     borderRadius: 5,
@@ -61,8 +61,9 @@ export const adminRequestedStyle = StyleSheet.create({
     flex: 1,
   },
   infoText: {
-    fontWeight: "bold",
-    fontSize: 15,
+    fontWeight: "semibold",
+    marginBottom: 1,
+    fontSize: 14,
     color: "#333",
   },
   noLoansText: {

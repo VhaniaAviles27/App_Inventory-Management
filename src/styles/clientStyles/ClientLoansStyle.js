@@ -52,7 +52,7 @@ export const clientLoanStyle = StyleSheet.create({
   },
 
   infoText: {
-    fontWeight: "bold",
+    fontWeight: "semibold",
     fontSize: 15,
     color: "#333",
   },
