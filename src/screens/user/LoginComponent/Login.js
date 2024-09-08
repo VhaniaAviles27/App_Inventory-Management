@@ -61,15 +61,15 @@ const Login = () => {
     return (
         <ScrollView contentContainerStyle={loginStyle.containerScroll}>
             <ImageBackground
-                source={require("../../../../assets/fondo.jpg")}
+                source={require("../../../../assets/background_color.jpg")}
                 style={loginStyle.backgroundImage}
-                imageStyle={{ opacity: 0.25 }}
+                imageStyle={{ opacity: 1 }}
             >
                 <View style={loginStyle.containerBody}>
                     <View style={{ alignItems: "center" }}>
                         <Image
                             style={loginStyle.image}
-                            source={require("../../../../assets/emerson.png")}
+                            source={require("../../../../assets/logoStockFlow.png")}
                         />
                     </View>
                     <View style={loginStyle.container}>
