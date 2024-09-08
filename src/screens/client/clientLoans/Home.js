@@ -19,7 +19,7 @@ const Home = () => {
                 onFilterChange={handleFilterChange}
                 color = "white"
             />
-            <View>
+            <View style = {{paddingBottom:160}}>
                 <ProductCard filterText={filterText} />
             </View>
         </View>

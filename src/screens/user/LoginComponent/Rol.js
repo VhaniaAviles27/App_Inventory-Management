@@ -12,8 +12,8 @@ const Rol = () => {
 
   return (
     <ImageBackground
-      source={require("../../../../assets/fondo.jpg")}
-      imageStyle={{ opacity: 0.25 }}
+      source={require("../../../../assets/background_color.jpg")}
+      imageStyle={{ opacity: 0.8 }}
       style={rolStyle.backgroundContainer}
       resizeMode="cover"
     >
