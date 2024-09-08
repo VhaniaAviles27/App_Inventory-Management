@@ -31,22 +31,22 @@ Estas son las dependencias requeridas para el proyecto
 _Inicio de Sesión - Registro_
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/99fd2291-bea4-4805-9a0c-7b485ff15e2a" alt="Screen_LogIn">
+  <img src="https://github.com/user-attachments/assets/b7104c0a-c7c9-440f-8b81-f2cf806af444" alt="Screen_LogIn">
   <img src="https://github.com/user-attachments/assets/af883d48-feae-4dbb-9df6-6085329c49ea" alt="Screen_Register">
 </p>
 
 _Tipo de Usuario - Menu_ 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/081e193b-b0e7-4c53-99ae-22468d5bc116" alt="Screen_Rol">
-  <img src="https://github.com/user-attachments/assets/6f0b9065-e7aa-41da-8a56-6c783498586b" alt="Screen_Menu">
+  <img src="https://github.com/user-attachments/assets/d4726f55-e307-4345-8ab7-82774d02f09a" alt="Screen_Rol">
+  <img src="https://github.com/user-attachments/assets/08eaf37c-126b-4734-8e78-26bd2f63317e" alt="Screen_Menu">
 </p>
 
 _Navegación de Usuario_ 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d991aeae-7a77-4ddb-9174-f0d9e879b4e3" alt="Screen_User_Home">
-  <img src="https://github.com/user-attachments/assets/bf590c62-9242-4393-afb7-d1c29c118f0c" alt="Screen_User_Details">
+  <img src="https://github.com/user-attachments/assets/b0d85ec4-1b5a-48c4-bbd2-ccec3be7b683" alt="Screen_User_Home">
+  <img src="https://github.com/user-attachments/assets/8058e6b5-ece4-486e-99d7-16efc0d92605" alt="Screen_User_Details">
   <img src="https://github.com/user-attachments/assets/46122fde-a968-4c47-80e7-441a158f60f0" alt="Screen_User_Loans">
   <img src="https://github.com/user-attachments/assets/30b7710a-c476-408d-bd6b-816cd2f9101e" alt="Screen_User_Returns">
   <img src="https://github.com/user-attachments/assets/eed9e10e-e693-4e1b-a351-3a33034887b2" alt="Screen_User_Profile">
