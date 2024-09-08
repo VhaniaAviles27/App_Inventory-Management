@@ -9,8 +9,6 @@ import { auth } from "../../../../Firebase";
 import { FontAwesome } from '@expo/vector-icons';
 import firebase from '../../../../Firebase';
 
-// Poner como default el Usuario = "User"
-// Comentario 2
 
 const Register = ({navigation}) => {
 
@@ -19,6 +17,7 @@ const Register = ({navigation}) => {
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [area, setArea] = useState("");
+  const [tipo, setTipo] = useState("");
 
   const handleRegister = async () => {
     try {
@@ -32,6 +31,7 @@ const Register = ({navigation}) => {
         password: password,
         telefono: phone,
         area: area,
+        tipo: "User",
       });
       navigation.navigate('Login');
       alert('Usuario registrado con éxito');
@@ -44,15 +44,15 @@ const Register = ({navigation}) => {
   return (
     <ScrollView contentContainerStyle={registerStyle.containerScroll}>
       <ImageBackground
-        source={require("../../../../assets/fondo.jpg")}
+        source={require("../../../../assets/background_color.jpg")}
         style={registerStyle.backgroundImage}
-        imageStyle={{ opacity: 0.25 }}
+        imageStyle={{ opacity: 1 }}
       >
         <View style={registerStyle.containerBody}>
           <View style={{ alignItems: "center" }}>
             <Image
               style={registerStyle.image}
-              source={require("../../../../assets/emerson.png")}
+              source={require("../../../../assets/logoStockFlow.png")}
             />
           </View>
           <View style={registerStyle.container}>
