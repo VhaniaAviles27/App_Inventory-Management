@@ -32,21 +32,21 @@ _Inicio de Sesión - Registro_
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b7104c0a-c7c9-440f-8b81-f2cf806af444" alt="Screen_LogIn">
-  <img src="https://github.com/user-attachments/assets/af883d48-feae-4dbb-9df6-6085329c49ea" alt="Screen_Register">
+  <img src="https://github.com/user-attachments/assets/2d4f4780-bb18-4743-ad2d-319f4c63fd76" alt="Screen_Register">
 </p>
 
 _Tipo de Usuario - Menu_ 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d4726f55-e307-4345-8ab7-82774d02f09a" alt="Screen_Rol">
+  <img src="https://github.com/user-attachments/assets/157bea0b-fe10-444f-900a-6b5aedfe653d" alt="Screen_Rol">
   <img src="https://github.com/user-attachments/assets/08eaf37c-126b-4734-8e78-26bd2f63317e" alt="Screen_Menu">
 </p>
 
 _Navegación de Usuario_ 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b0d85ec4-1b5a-48c4-bbd2-ccec3be7b683" alt="Screen_User_Home">
-  <img src="https://github.com/user-attachments/assets/8058e6b5-ece4-486e-99d7-16efc0d92605" alt="Screen_User_Details">
+  <img src="https://github.com/user-attachments/assets/38ee8c55-6ae6-4278-a796-08b3831d8259" alt="Screen_User_Home">
+  <img src="https://github.com/user-attachments/assets/4cb029f6-cb68-4e0a-a0dd-89c3ca59de8b" alt="Screen_User_Details">
   <img src="https://github.com/user-attachments/assets/46122fde-a968-4c47-80e7-441a158f60f0" alt="Screen_User_Loans">
   <img src="https://github.com/user-attachments/assets/30b7710a-c476-408d-bd6b-816cd2f9101e" alt="Screen_User_Returns">
   <img src="https://github.com/user-attachments/assets/eed9e10e-e693-4e1b-a351-3a33034887b2" alt="Screen_User_Profile">
@@ -65,8 +65,9 @@ _Navegación de Administrador_
 Adjunto link de la explicación del aplicativo: https://drive.google.com/file/d/1xoTQBfzWdn_VmIpifYwSdIxWj_k4jIuy/view?usp=sharing
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a3c90f6d-0115-46b5-8f34-81a820cae09f" alt="Screen_Video">
+  <img src="https://github.com/user-attachments/assets/dcf7e077-5135-4443-b0d0-02aa7e1b077b" alt="Screen_Video">
 </p>
+
 
 ## Autor ✒️
 
