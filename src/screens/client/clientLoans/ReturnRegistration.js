@@ -42,7 +42,7 @@ const ReturnRegistration = () => {
           {loans.length > 0 ? (
             <FlatList
               data={loans}
-              keyExtractor={(item) => item.loansHistoryID}
+              keyExtractor={(item) => item.loansReturnID}
               renderItem={({ item }) => (
                 <View style={clientReturnedStyle.registerContainer}>
                   <View style={clientReturnedStyle.registroPrestamo}>

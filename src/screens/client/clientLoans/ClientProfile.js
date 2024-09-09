@@ -56,7 +56,6 @@ const ClientProfile = () => {
             }}
           >
             <Text style={clientProfileStyle.userName}>{usuarioActual.nombre}</Text>
-            <Text style={clientProfileStyle.userLastName}> {usuarioActual.apellido}</Text>
           </View>
 
           <Text style={clientProfileStyle.userDetail}>

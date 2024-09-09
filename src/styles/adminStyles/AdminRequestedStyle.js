@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const adminRequestedStyle = StyleSheet.create({
   returnButtonAllow: {
-    width: 150,
+    width: "46.5%",
     backgroundColor: "#4CCD23",
     marginTop: 6,
     marginHorizontal: 10,
@@ -11,7 +11,7 @@ export const adminRequestedStyle = StyleSheet.create({
     alignItems: "center",
   },
   returnButtonDeny: {
-    width: 150,
+    width: "46.5%",
     backgroundColor: "#DC1111",
     marginTop: 6,
     marginHorizontal: 10,

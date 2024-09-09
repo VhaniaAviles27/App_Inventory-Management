@@ -58,6 +58,7 @@ export const productStyle = StyleSheet.create({
     elevation: 1,
     padding: 8,
     paddingLeft: 15,
+    paddingRight: 5,
     marginBottom: 15,
   },
   devolucion:{

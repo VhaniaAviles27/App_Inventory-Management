@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const clientLoanStyle = StyleSheet.create({
   returnButton: {
-    width: 350,
+    width: "100%",
     backgroundColor: "#071356",
     marginTop: 10,
     padding: 10,
@@ -32,12 +32,15 @@ export const clientLoanStyle = StyleSheet.create({
 
   container: {
     flex: 1,
-    padding: 16,
+    padding: 20,
+    paddingTop: 40,
+    paddingBottom: 20,
     backgroundColor: "#f5f5f5",
   },
 
   header: {
     fontSize: 24,
+    marginLeft: 3,
     fontWeight: "bold",
     marginBottom: 16,
     color: "#333",

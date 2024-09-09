@@ -32,11 +32,14 @@ export const clientReturnedStyle = StyleSheet.create({
 
   container: {
     flex: 1,
-    padding: 16,
+    padding: 20,
+    paddingTop: 40,
+    paddingBottom: 20,
     backgroundColor: "#f5f5f5",
   },
   header: {
     fontSize: 24,
+    marginLeft: 3,
     fontWeight: "bold",
     marginBottom: 16,
     color: "#333",

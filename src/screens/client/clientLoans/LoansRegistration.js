@@ -123,9 +123,8 @@ const LoansRegistration = () => {
                       <Text style={clientLoanStyle.infoText}>Fecha de devolución: {item.fechaDevolucion}</Text>
                     </View>
                   </View>
-                  <View>
+                  <View style={clientLoanStyle.returnButton}>
                     <TouchableOpacity
-                      style={clientLoanStyle.returnButton}
                       onPress={() => showReturnAlert(item.loansHistoryID)}
                     >
                       <Text style={clientLoanStyle.returnButtonText}>
